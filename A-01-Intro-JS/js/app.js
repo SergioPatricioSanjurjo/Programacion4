@@ -292,6 +292,15 @@ CrearCuentaBancaria.prototype.retirar = function(monto) {
 };
 CrearCuentaBancaria.prototype.saldo = function() {return this.saldo};
 //? 29. Crear un constructor `Libro` con propiedades `titulo`, `autor` y `paginas`, y un método `detalles` que imprima la información del libro.
-
+function Libro(titulo, autor, paginas) {
+    this.titulo = titulo;
+    this.autor = autor;
+    this.paginas = paginas;
+};
+Libro.prototype.detalles = function() {
+    return console.log('Titulo: ' + this.titulo + ' Autor: ' + this.autor + ' Paginas: ' + this.paginas);
+};
+let libro29 = new Libro('Libro1', 'Autor1', 53);
+libro29.detalles();
 //! ----------Proyecto Final: Manejo de Datos----------
 //? 30. Crear un programa que simule una lista de tareas (`to-do list`) utilizando objetos y arrays. Debe permitir agregar tareas, marcar tareas como completadas y listar las tareas pendientes
