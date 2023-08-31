@@ -1,0 +1,187 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #161616;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div{
+    margin: 5px;
+    border-radius: 10px;
+    padding: 40px;
+    width: 95%;
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight:bolder;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight:bolder;
+    text-decoration: underline;
+}
+
+#div01, #div03, #div05, #div07, #div09{
+    background-color: bisque;
+}
+#div02, #div04, #div06, #div08, #div10{
+    background-color: beige;
+}
+
+#imagen1{
+    height: 300px;
+    width: 400px;
+    border-radius: 10%;
+    transition-duration: 1s;
+}
+#imagen1:hover{
+    filter: sepia(100%);
+}
+
+#inText{
+    height: 50px;
+    width: 50%;
+    font-size: 1.5rem;    
+    border-radius: 10px;
+    padding: 10px;
+    border-width: 5px;
+    border-color: brown;
+    background-color: #054343;
+    color: gold;
+    margin: 10px;
+}
+#envBtn{
+    font-size: 1.5rem;    
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 15px;
+    border-width: 10px;
+    border-color: black;
+    background-color: green;
+    color: yellow;
+    margin: 10px;
+    transition-duration: 0.4s;
+}
+#envBtn:hover{
+    filter:grayscale(75%)
+}
+#envBtn:focus{
+    filter: grayscale(100%);
+}
+
+#parrafo01{
+    font-size: 2rem;
+    color: lime;
+    background-color: black;
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.parrafos{
+    font-size: 0.9rem;
+    color: aqua;
+    background-color: #101010;
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+}
+#parrafoIz{
+    text-align: left;
+}
+#parrafoCe{
+    text-align: center;
+}
+#parrafoDe{
+    text-align: right;
+}
+
+#listaOr{
+    list-style: upper-roman;
+    background-color: #141414;
+    padding: 15px 15px 15px 35px;
+    border-radius: 15px;
+    color: azure;
+}
+
+table, th, td{
+    border: 3px solid orangered;
+    border-collapse: collapse;
+    border-style: ridge;
+    color: aliceblue;
+}
+th, td{
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;    
+}
+tr{
+    background-color:darkblue;
+}
+tr:nth-child(even) {
+    background-color: #054343;
+}
+td:hover{
+    background-color: black;
+    color: rebeccapurple;
+}
+
+#divBtn{
+    flex-direction: row;
+    justify-content: center;
+}
+.btn{
+    width: 350px;
+    font-size: 3rem;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10%;
+    transition-duration: 0.6s;
+}
+#btn1{
+    color: darkgoldenrod;
+    background-color: lightsalmon;
+}
+#btn2{
+    color: darkmagenta;
+    background-color: lightpink;
+}
+#btn3{
+    color: darkblue;
+    background-color: lightblue;
+}
+#btn1:hover, #btn2:hover, #btn3:hover{
+    filter: invert(100%);
+}
+#btn1:focus, #btn2:focus, #btn3:focus{
+    color: red;
+    background-color: black;
+}
+
+footer{
+    color: darkgreen;
+    background-color: fuchsia;
+    font-size: 5rem;
+    border-radius: 25px;
+    margin: 15px;
+    padding: 25px;
+    transition-duration: 0.5s;
+}
+footer:hover{
+    filter:brightness(50%);
+}

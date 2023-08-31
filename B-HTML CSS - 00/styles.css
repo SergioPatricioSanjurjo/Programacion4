@@ -1,0 +1,68 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color:  #101010;
+    color: lime; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+}
+
+nav {
+    display: block;
+    font-size: 2rem;
+}
+nav a:link{
+    color: red;
+}
+nav a:visited{
+    color: cadetblue;
+}
+nav a:hover{
+    color: lime;
+}
+nav a:active{
+    color: chocolate;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+span{
+    color: crimson;
+}
+img{
+    width: 50vw;
+    height: 50vh;
+    border-radius: 50px;
+    margin: 25px;
+}
+button{
+    color: cadetblue;
+    background-color: chocolate;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+section p strong{
+    color: cornflowerblue;
+}
+
+em{
+    color: darkorange;
+}
