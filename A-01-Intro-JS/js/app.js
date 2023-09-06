@@ -304,3 +304,34 @@ let libro29 = new Libro('Libro1', 'Autor1', 53);
 libro29.detalles();
 //! ----------Proyecto Final: Manejo de Datos----------
 //? 30. Crear un programa que simule una lista de tareas (`to-do list`) utilizando objetos y arrays. Debe permitir agregar tareas, marcar tareas como completadas y listar las tareas pendientes
+function toDoList(){
+    this.lista = new Array();
+};
+toDoList.prototype.agregarTarea = function(tarea){
+    let nuevaTarea = {};
+    nuevaTarea.nombre = tarea;
+    nuevaTarea.estado = 'Pendiente';
+    this.lista.push(nuevaTarea);
+};
+toDoList.prototype.listarTareas = function(){
+    console.log(this.lista);
+};
+toDoList.prototype.completarTarea = function(compTarea){
+    let compTar = this.lista.findIndex(item => item.nombre == compTarea);
+    if(compTar != -1){
+        this.lista[compTar].estado = 'Completa';
+    }else{
+        console.log('La actividad "' + compTarea + '" no se encuentra en la lista');
+    }
+}
+let toDoLista30 = new toDoList();
+toDoLista30.agregarTarea('limpiar');
+toDoLista30.agregarTarea('lijar');
+toDoLista30.agregarTarea('pintar');
+toDoLista30.agregarTarea('2° pint');
+toDoLista30.agregarTarea('pulir');
+toDoLista30.completarTarea('limpiar');
+toDoLista30.completarTarea('lijar');
+toDoLista30.completarTarea('lacado');
+toDoLista30.listarTareas();
+

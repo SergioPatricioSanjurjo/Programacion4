@@ -215,7 +215,7 @@ class Producto14{
         return this.precio;
     }
     get getNombre(){
-        return this.nombre
+        return this.nombre;
     }
     set setPrecio(nuevoPrecio){
         this.precio = nuevoPrecio;
@@ -228,10 +228,99 @@ class RegistroVentas14{
     constructor(){
         this.lista = new Array();
     }
+    agregarProducto(nuevoProducto, cantidad) {
+        let newProd = this.lista.findIndex(item => item.nombre == nuevoProducto.nombre);
+        if(newProd == -1){
+            let prodObj = {};
+            prodObj.nombre = nuevoProducto.nombre;
+            prodObj.precio = nuevoProducto.precio;
+            prodObj.cantidad = cantidad;
+            this.lista.push(prodObj);            
+        }else{
+            this.lista[newProd].cantidad += cantidad;
+        }
+    };
 };
-
+let unProd14Sub1 = new Producto14('banana', 15);
+let unProd14Sub2 = new Producto14('pera', 35);
+let unProd14Sub3 = new Producto14('manzana', 10);
+let unProd14Sub4 = new Producto14('mandarina', 5);
+let unRegistroVta14 = new RegistroVentas14();
+unRegistroVta14.agregarProducto(unProd14Sub1, 3);
+unRegistroVta14.agregarProducto(unProd14Sub2, 7);
+unRegistroVta14.agregarProducto(unProd14Sub3, 8);
+unRegistroVta14.agregarProducto(unProd14Sub4, 9);
+unRegistroVta14.agregarProducto(unProd14Sub1, 13);
+console.log(unRegistroVta14);
 //? 15. Carrito de Compras: Simula un carrito de compras que permite agregar, eliminar y calcular el total.
+class Carrito15{
+    constructor(){
+        this.lista = new Array();
+    }
+    agregarCompra(producto, precio){
+        let prodObj = {};
+        prodObj.nombre = producto;
+        prodObj.precio = precio;
+        this.lista.push(prodObj);
+    }
+    eliminarCompra(prodNombre){
+        let elimObj = this.lista.findIndex(item => item.nombre == prodNombre);
+        if(elimObj != -1){
+            this.lista.splice(elimObj, 1);
+        }else{
+            console.log('El producto ue desea eliminar no esta en el carro');
+        }
+    }
+    calcularTotal(){
+        let total = 0;
+        this.lista.forEach(item => {
+            total += item.precio;
+        });
+        return 'El total de la compra es: $' + total;
+    }
+};
+let unCarrito15 = new Carrito15();
+unCarrito15.agregarCompra('asado', 90);
+unCarrito15.agregarCompra('costillar', 100);
+unCarrito15.agregarCompra('vacio', 250);
+unCarrito15.agregarCompra('tapa', 70);
+console.log(unCarrito15);
+unCarrito15.eliminarCompra('compra');
+unCarrito15.eliminarCompra('costillar');
+console.log(unCarrito15);
+console.log(unCarrito15.calcularTotal());
 //? 16. Gestor de Tareas: Crea un gestor de tareas que permita agregar, completar y listar tareas pendientes.
+class Tarea16{
+    constructor(nombreTarea){
+        this.nombre = nombreTarea;
+        this.estado = 'Pendiente'; 
+    }
+};
+class Gestor16{
+    constructor(){
+        this.lista = new Array();
+    }
+    agregarTarea(nuevaTarea){
+        let newTarea = new Tarea16(nuevaTarea);
+        this.lista.push(newTarea);
+    }
+    completarTarea(compTarea){
+        let compTar = this.lista.findIndex(item => item.nombre == compTarea);
+        if(compTar != -1){
+            this.lista[compTar].estado = 'Completa';
+        }else{
+            console.log('La tarea ' + compTarea + ' no se encuentra en la lista');
+        }
+    }
+};
+let gestorTareas16 = new Gestor16();
+gestorTareas16.agregarTarea('caminata');
+gestorTareas16.agregarTarea('trote');
+gestorTareas16.agregarTarea('fondo');
+gestorTareas16.agregarTarea('4k');
+gestorTareas16.completarTarea('caminata');
+gestorTareas16.completarTarea('12k');
+console.log(gestorTareas16);
 
 
 

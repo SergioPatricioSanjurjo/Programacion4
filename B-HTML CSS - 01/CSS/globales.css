@@ -1,0 +1,17 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+.span-titulo{
+    color:rgb(22, 129, 251)
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+}
