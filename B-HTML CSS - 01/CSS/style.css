@@ -101,3 +101,29 @@ hr{
     margin: 3rem;
     line-height: 5rem;
 }
+
+/**-----------------Lista de Productos------------**/
+.contenedor-lista-prod{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista-productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.producto{
+    background-color: rgb(21,68, 155);
+}
+.precio{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+.btn-carrito{
+    border-radius: 10%;
+    background-color: darkgreen;
+    color: whitesmoke;
+}
