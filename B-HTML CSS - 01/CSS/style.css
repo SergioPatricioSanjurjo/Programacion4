@@ -12,7 +12,7 @@ hr{
     border: 0.1rem solid rgb(206, 204, 204);
 }
 
-/**Navegacion**/
+/**----------------Navegacion---------------------**/
 .navegacion{
     display: flex;
     justify-content: space-around;
@@ -76,6 +76,7 @@ hr{
     color: azure;
 }
 
+/**----------------NOSOTROS---------------------**/
 #div-sobre-nos{
     margin-top: 3rem;
     display: flex;
@@ -102,28 +103,112 @@ hr{
     line-height: 5rem;
 }
 
-/**-----------------Lista de Productos------------**/
-.contenedor-lista-prod{
+/**-----------------TIENDA--------------------**/
+.sect-lista-prod{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.sect-lista-prod h2{
+    font-size: 4rem;
+    margin: 2rem;
 
+}
 .lista-productos{
+    width: 60%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
 }
 .producto{
     background-color: rgb(21,68, 155);
 }
+.producto img{
+    object-fit: cover;
+    height: 15rem;
+    width: 100%;
+}
+.producto div h3{
+    text-align: center;
+    color: azure;
+    font-size: 2rem;
+}
+.producto div p{
+    text-align: center;
+    color: azure;
+    padding: 1rem;
+}
 .precio{
-    font-size: 1.5rem;
-    font-weight: bolder;
+    font-size: 2.5rem;
+    font-weight: bold;
     text-align: center;
 }
 .btn-carrito{
-    border-radius: 10%;
-    background-color: darkgreen;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 1.5rem;
+    background-color: #8bbc01;
     color: whitesmoke;
+}
+.producto:nth-child(1){
+    grid-column: 1/7;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.producto:nth-child(1) img{
+    height: 100%;
+}
+.producto:nth-child(2){
+    grid-column: 1/4;
+}
+.producto:nth-child(3){
+    grid-column: 4/7;
+}
+.producto:nth-child(4){
+    grid-column: 1/3;
+}
+.producto:nth-child(5){
+    grid-column: 3/5;
+}
+.producto:nth-child(6){
+    grid-column: 5/7;
+}
+
+
+/**-----------------FOOTER--------------------**/
+.hr-foot{
+    margin-top: 6rem;
+}
+.footer1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer1 p{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2rem;
+    color: rgba(0, 0, 0, 0.600);
+}
+.div-foot1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8rem;
+}
+.div-foot1 nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.div-foot1 nav h2{
+    font-size: 2.5rem;
+    font-weight: bolder;
+}    
+.div-foot1 nav a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
 }
