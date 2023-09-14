@@ -1,5 +1,5 @@
 //! --------------------Callback-Functions---------------------------------------------------------------------------------------
-console.log('---------CALLBACK-fUNCTIONS--------------------------------------');
+console.log('---------CALLBACK-FUNCTIONS--------------------------------------');
 const empleados = [{id: 1, name: 'Maria'},{id: 2, name: 'Ana'},{id: 3, name: 'Roberto'},{id: 4, name: 'Carlos'}];
 const salarios = [{id: 1, salario: 2000},{id: 2, salario: 2500},{id: 3, salario: 3000},{id: 4, salario: 4000}];
 const getEmpleadoById = (id, callback) => {
@@ -123,10 +123,148 @@ retrasarEjecucion(5000, () => {
 //?una solicitud a una API y, cuando se complete, llamar a la función de callback con los datos del usuario.
 console.log('---------04-----------------------------------------------------');
 function obtenerDatosUsuario(unaId, callback) {
-
+    setTimeout(callback, 5000);
 };
 
 //!----------------Ejercicio 5: Promesas y Callbacks-------------------------------
 //?Modifica el ejercicio 4 para que en lugar de utilizar callbacks, 
 //?utilice promesas para manejar la solicitud de datos de usuario.
 console.log('---------05-----------------------------------------------------');
+
+
+
+
+
+//TODO PASAR COMO  CABECERA DE PROMISE
+console.log('------------------------PROMISE------------------------------------------');
+//!------------------PROMISE------------------------------------------------------------------
+const calcularDescuento = new Promise((resolve, reject) =>{             //!-------------------
+    const descuento = true;                                             //!-------------------
+    if(descuento){                                                      //!-------------------
+        resolve('Descuento Realizado');                                 //!-------------------
+    }else{                                                              //!-------------------
+        reject('ERROR!!!   el descuento no poede ser aplicado');        //!-------------------
+    }                                                                   //!-------------------
+});                                                                     //!-------------------
+//console.log(calcularDescuento);                                       //!-------------------
+calcularDescuento                                                       //!-------------------
+    .then((data) => {console.log(data)})                                //!-------------------
+    .catch((err) => {console.log(err);});                               //!-------------------                                           
+//!-------------------------------------------------------------------------------------------
+console.log('------------------------EJEMPLO------------------------------------------');
+const estudiantes = [
+    {id: 1, nombre:'Maria'},
+    {id: 2, nombre:'Ana'},
+    {id: 3, nombre:'Marcelo'},
+    {id: 4, nombre:'Adrian'}
+];
+const notas = [
+    {id: 1, nota:10},
+    {id: 2, nota:9},
+    {id: 3, nota:8}
+];
+const getEstudianteById = (id) => new Promise((resolve, reject) => {
+    const estudiante = estudiantes.find((e) => e.id === id);
+    if(estudiante){
+        resolve(estudiante);
+    }else{
+        reject('El estudiante con id ' + id + ' NO EXISTE...');
+       // reject('El estudiante con id ${id} NO EXISTE...');   //TODO ----> NO TOMA "${ID}"
+    }
+});
+getEstudianteById(2)
+    .then((data) => {console.log(data)})
+    .catch((err) => {console.log(err);});
+getEstudianteById(32)
+    .then((data) => {console.log(data)})
+    .catch((err) => {console.log(err);});
+    
+const getNotaById = (id) => new Promise((resolve, reject) => {
+        const nota = notas.find((e) => e.id === id);
+        if(nota){
+            resolve(nota);
+        }else{
+            reject('El estudiante con la id ' + id + ' NO tiene NOTA...');
+        }
+    });
+let idEstudiante = 2
+getEstudianteById(idEstudiante)
+    .then(estudiante => getNotaById(idEstudiante)
+                            .then(nota => console.log('El estudiante ' + estudiante.nombre + ' con la id ' + estudiante.id + ' tiene la nota: ' + nota.nota)))
+    .catch((err) => {console.log(err)});    //! no se necesita otro catch porque lo comparten 
+
+
+
+
+
+
+//TODO PASAR COMO  CABECERA DE ASYNC | AWAIT
+console.log('------------------------ASYNC--|--AWAIT------------------------------------------');
+//!------------------------ASYNC--|--AWAIT------------------------------------------------------
+async function verEstudiante(ide){                                      //!---------------------
+    try{                                                                //!---------------------
+        const estudiante = await getEstudianteById(ide);                //!---------------------
+        const {nombre, id} = estudiante;                                //!---------------------
+        console.log(nombre);                                            //!---------------------
+        console.log(id);                                                //!---------------------
+        const newNota = await getNotaById(id);                          //!---------------------
+        const {nota} = newNota;                                         //!---------------------
+        console.log(nota);                                              //!---------------------
+    }catch(error){                                                      //!---------------------
+        console.log(error);                                             //!---------------------
+    }                                                                   //!---------------------
+}                                                                       //!---------------------
+verEstudiante(10);                                                      //!---------------------
+//!---------------------------------------------------------------------------------------------
+
+
+
+
+
+//TODO PASAR COMO  CABECERA DE FETCH
+console.log('------------------------FETCH--------------------------------------------------');
+//!------------------------FETCH----------------------------------------------------------------
+const unaUrl = './algo.txt'                              //!-------------------------------------
+                                                        //!-------------------------------------
+const verTxt = (url) => {                               //!-------------------------------------
+    fetch(url)                                          //!-------------------------------------
+        .then(resultado => clg(resultado))              //!-------------------------------------
+};                                                      //!-------------------------------------
+verTxt(unaUrl);                                         //!-------------------------------------
+//!---------------------------------------------------------------------------------------------
+const verTxt2 = (url) => {                              //!-------------------------------------
+    fetch(url)                                          //!-------------------------------------
+        .then(resultado => resultado.text())            //!-------------------------------------
+        .then(texto => console.log(texto))              //!-------------------------------------
+};                                                      //!-------------------------------------
+verTxt2(unaUrl);                                        //!-------------------------------------
+//!---------------------------------------------------------------------------------------------
+async function verTxt3(url) {                           //!-------------------------------------
+    try{                                                //!-------------------------------------
+        const resultado = await fetch(url);             //!-------------------------------------
+        const texto = resultado.text();                 //!-------------------------------------
+        console.log(texto);                             //!-------------------------------------
+    }catch(err){                                        //!-------------------------------------
+        console.log(err);                               //!-------------------------------------
+    }                                                   //!-------------------------------------
+};                                                      //!-------------------------------------
+verTxt3(unaUrl);                                        //!-------------------------------------
+//!---------------------------------------------------------------------------------------------
+
+const otraUrl = 'https://picsum.photos/list'
+const getApi = async(url) => {
+    try{
+        const resultado = await fetch(url);         
+        const texto = resultado.text();               
+        console.log(texto);   
+    }catch(err){
+        console.log(err);
+    }
+};
+
+function verRegistros(array){
+
+};
+
+//!---------------------------------------------------------------------------------------------
+//TODO      https://publicapi.dev
