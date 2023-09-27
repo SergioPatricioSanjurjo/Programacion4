@@ -7,7 +7,7 @@ html{
 }
 
 body{
-    background-color:  #101010;
+    background-color:  black;
     color: lime; 
     display: flex;
     flex-direction: column;

@@ -1,0 +1,28 @@
+@import url(./globales.css);
+
+/**----------------NOSOTROS-----------------------**/
+#divSobreNos{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    color: azure;
+    background-color: rgb(21, 68, 155);
+    text-align: center;
+    align-self: center;
+}
+#divSobreNos img{
+    width: 50%;
+    height: 100%;
+}
+.pNosotros{
+    width: 50%;
+}
+.pNosotros h2{
+    font-size: 5rem;
+    margin: 10rem 0;
+}
+.pNosotros p{
+    font-size: 3rem;
+    margin: 3rem;
+    line-height: 5rem;
+}

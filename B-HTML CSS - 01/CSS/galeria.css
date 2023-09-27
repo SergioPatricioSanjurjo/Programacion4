@@ -1,0 +1,33 @@
+@import url(./globales.css);
+
+/**-----------------GALERIA-----------------------**/
+.contenedorGaleria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+.contenedorGaleria h2{
+    font-size: 4rem;
+    margin: 2rem;
+}
+.listaGaleria{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.foto{
+    width: 100%;
+    height: 20rem;
+}
+.foto img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition-duration: 1s;
+}
+.foto img:hover{
+    filter: invert(90%);
+    cursor: pointer;
+}

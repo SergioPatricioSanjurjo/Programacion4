@@ -1,5 +1,12 @@
+/**---------------FONTS-----------------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap");  
+/** font-family: 'Roboto Condensed', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Roboto:wght@300&display=swap');
+/** font-family: 'Croissant One'; */
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Gloria+Hallelujah&family=Roboto:wght@300&display=swap');
+/** font-family: 'Gloria Hallelujah', cursive; */
 
+/**---------------GLOBAL-----------------------------------------------------------------------------------*/
 html{
     box-sizing: border-box;
     font-size: 62.5%;
@@ -12,7 +19,7 @@ body{
     margin: 0;
 }
 
-/**----------------Navegacion---------------------**/
+/**----------------NAVEGACION---------------------**/
 .contenedor{
     display: flex;
     flex-direction: row;
@@ -36,7 +43,6 @@ hr{
     text-decoration: none;
     color: black;
 }
-
 
 /**-----------------FOOTER--------------------**/
 .hr-foot{

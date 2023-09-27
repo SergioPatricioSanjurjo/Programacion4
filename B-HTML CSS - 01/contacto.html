@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/contacto.css">
     <title>Contacto</title>
 </head>
 <body>
@@ -22,7 +22,80 @@
         </div>
     </nav>
 
+    <section class="contactoContainer">
+        <h2>Contacto</h2>
+        <form action="" method="post" class="contactoForm">
+            <fieldset>
+                <legend>TUS DATOS</legend>
+                <div class="inputs">
+                    <label for="idNombre">Nombre:</label>
+                    <input type="text" id="idNombre" placeholder="Ingrese Nombre..." required>
+                </div>
+                <div class="inputs">
+                    <label for="idAsunto">Asunto:</label>
+                    <input type="text" id="idAsunto" placeholder="Ingrese su Asunto..." required>
+                </div>
+                <div class="inputs">
+                    <label for="idEmail">Email:</label>
+                    <input type="email" id="idEmail" placeholder="Ingrese su Email..." required>
+                </div>
+                <div class="inputs">
+                    <label for="idTelefono">Telefono:</label>
+                    <input type="tel" id="idTelefono" placeholder="Ingrese su Telefono..." required>
+                </div>
+                <div class="inputs">
+                    <label for="idMensaje">Mensaje:</label>
+                    <textarea id="idMensaje" cols="40" rows="5">MSJ...</textarea>            
+                </div>
+            </fieldset>
+        </form>
 
+        <form action="" method="post" class="contactoForm">
+            <fieldset>
+                <legend>PAIS</legend>
+                <div class="inputs">
+                    <label for="idPais">Pais</label>
+                    <select name="pais" id="idPais" required>
+                        <option value="" disabled selected>-- Seleccione --</option>
+                        <option value="ar">Argentina</option>
+                        <option value="br">Brasil</option>
+                        <option value="bo">Bolivia</option>
+                        <option value="cl">Chile</option>
+                        <option value="pa">Paraguay</option>
+                        <option value="pe">Peru</option>
+                        <option value="ur">Uruguay</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+
+        <form action="" method="post" class="contactoForm">
+            <fieldset>
+                <legend>INFORMACION EXTRA</legend>
+                <div class="inputs">
+                    <label for="idCliente">Cliente</label>
+                    <input type="radio" name="tipoCliente" id="idCliente" value="cliente">
+                </div>
+                <div class="inputs">
+                    <label for="idProveedor">Proveedor</label>
+                    <input type="radio" name="tipoCliente" id="idProveedor" value="proveedor">
+                </div>
+                <div class="inputs">
+                    <label for="catInt">Categoria<br>de Interes</label>
+                    <input list="catInt">
+                    <datalist id="catInt">
+                        <option value="Cochera">
+                        <option value="Cocina">
+                        <option value="Dormitorios">
+                        <option value="Jardin">
+                        <option value="Hogar">
+                        <option value="Oficina">
+                    </datalist>
+                </div>
+            </fieldset>
+        </form>
+            <button type="submit">ENVIAR FORMULARIO</button>
+    </section>
 
     <hr class="hr-foot">
     <footer class="footer1">

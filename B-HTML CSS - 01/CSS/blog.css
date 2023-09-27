@@ -1,0 +1,93 @@
+@import url(./globales.css);
+
+/**-----------------BLOG--------------------------**/
+.contenedorBlog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+.contenedorBlog h2{
+    font-size: 4rem;
+    margin: 2rem;
+}
+.cuerpoBlog{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+.blogs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.blogs div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.blogs div h2{
+    font-size: 3.5rem;
+}
+.blogs div img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.blogs hr{
+    margin: 5rem 0;
+    width: 100%;
+}
+.blogFechaAutor{
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+    display: inline-block;
+}
+.blogFechaAutor h3{
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+.blogFechaAutor h3:nth-child(2){
+    margin-left: 70%;
+    margin-top: -4rem;
+}
+.blogFechaAutor span{
+    color:rgb(22, 129, 251)
+}
+.blogs div p{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-align: left;
+    margin-left: 1rem;
+}
+.blogs div a{
+    font-size: 2rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    padding: 1.5rem 15rem;
+    background-color: #8bbc01;
+    color: aliceblue;
+    margin-left: 1rem;
+    font-weight: 900;
+}
+.asideNav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+.asideNav nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.blogNavA{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}

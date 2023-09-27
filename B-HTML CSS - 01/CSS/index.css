@@ -1,0 +1,56 @@
+@import url(./globales.css);
+
+/**---------------------INDEX------------------------------------**/
+.hero{
+    background-image: url(../IMG/bodys/hero.jpg);
+    height: 50rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 3rem;
+}
+.categoriaProd{
+    margin: 20px 0;
+    padding-top: 10px;
+}
+.categoriaProd header{
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+}
+#divCatProd{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#divCatProd div{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+}
+.imgCatProd{
+    width: 30rem;
+    height: 30rem;
+    transition-duration: 1s;
+}
+.imgCatProd:hover{
+    filter: sepia(50%);
+}
+.btnImg{
+    width: 30rem;
+    height: 4rem;
+    border: none;
+    color: black;
+    transition-duration: 1s;
+    border-radius: 0 0 10px 10px;
+}
+.btnImg:hover{
+    cursor: pointer;
+    background-color: black;
+    color: aliceblue;
+}
+.btnImg:focus{
+    background-color: rgb(21, 68, 155);
+    color: azure;
+}

@@ -1,0 +1,78 @@
+@import url(./globales.css);
+
+/**-----------------CONTACTO---------------------**/
+
+.contactoContainer{
+    background-image: url(../IMG/bodys/contacto.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-top: 3rem;
+}
+.contactoContainer h2{
+    font-size: 4rem;
+    margin: 2rem;
+    color: aliceblue;
+}
+.contactoContainer button{
+    
+    background-color: #8bbc01;
+    color: aliceblue;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding: .5rem 4rem;
+    margin: 2rem;
+    transition-duration: 1s;
+    border: none;
+    border-radius: 10px;
+    margin-left: -32rem;
+}
+.contactoContainer button:hover{
+    color: black;
+    background-color: limegreen;
+    cursor: pointer;
+}
+.contactoForm{
+    width: 40%;
+    padding: 2rem;
+    font-size: 2.5rem;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 25px;
+    color: aliceblue;
+}
+.contactoForm:hover{
+    background-color: black;
+}
+.contactoForm legend{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(21,68, 155);
+    color: azure;
+    font-size: 3rem;
+    font-weight: bolder;
+    padding: 0.5rem;
+}
+.contactoForm fieldset{
+    padding: 3rem 3rem 4rem 3rem;
+}
+.inputs{
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.inputs input{
+    background-color: azure;
+    font-size: 2rem;
+}
+.inputs textarea{
+    background-color: azure;
+    font-size: 2rem;
+}
+#idCliente, #idProveedor{
+    margin-left: -90%;
+}
