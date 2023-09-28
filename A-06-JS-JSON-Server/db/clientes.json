@@ -1,0 +1,10 @@
+{
+    "clientes": [{
+        "apellido": "Martinez",
+        "nombre": "Juan",
+        "dni": 34298765,
+        "fechaInicio": "2023-08-17",
+        "id": 1
+    }
+    ]
+}

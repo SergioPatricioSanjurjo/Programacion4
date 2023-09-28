@@ -1,0 +1,83 @@
+/**---------------FONTS-----------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap");  
+/** font-family: 'Roboto Condensed', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Roboto:wght@300&display=swap');
+/** font-family: 'Croissant One'; */
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Gloria+Hallelujah&family=Roboto:wght@300&display=swap');
+/** font-family: 'Gloria Hallelujah', cursive; */
+
+
+/**----------------GLOBAL--------------------------**/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 3rem;
+    background-color: rgb(150, 149, 149);
+}
+
+
+/**----------------NAVEGACION---------------------**/
+
+hr{
+    border: 0.1rem solid black;
+}
+
+.topNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    font-size: 1.5rem;
+    padding-right: 3rem;
+}
+.topNav a{
+    margin: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+
+/**----------------NUEVO CLIENTE---------------------**/
+
+.containerNewClient{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    margin-top: 2rem;
+}
+.clienteForm{
+    width: 50%;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 20px;
+}
+.clienteForm legend{
+    width: 40%;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding: 0.5rem;
+    border-radius: 15%;
+}
+.clienteForm fieldset{
+    padding: 3rem;
+}
+.inputs{
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.inputs input{
+    background-color: azure;
+    font-size: 2rem;
+}

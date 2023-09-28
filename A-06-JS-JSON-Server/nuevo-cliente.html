@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Nuevo Cliente</title>
+</head>
+<body>
+    <header>
+        <hr>
+        <nav class="topNav">
+            <a href="./index.html">Inicio</a>
+            <a href="./nuevo-cliente.html">Nuevo</a>
+        </nav>
+        <hr>
+    </header>
+
+    <section class="containerNewClient">
+        <form action="" method="post" class="clienteForm" id="formulario">
+            <fieldset>
+                <legend>Nuevo Cliente</legend>
+                <div class="inputs">
+                    <label for="idApellido">Apellido:</label>
+                    <input type="text" id="idApellido" placeholder="Ingrese su Apellido..." required>
+                </div>
+                <div class="inputs">
+                    <label for="idNombre">Nombre:</label>
+                    <input type="text" id="idNombre" placeholder="Ingrese su Nombre..." required>
+                </div>
+                <div class="inputs">
+                    <label for="idDni">DNI:</label>
+                    <input type="number" id="idDni" placeholder="Ingrese su DNI..." required>
+                </div>
+                <div class="inputs">
+                    <label for="idFechaInicio">Fecha Inicio:</label>
+                    <input type="date" id="idFechaInicio" required>
+                </div>
+                <button type="submit">Crear Cliente</button>
+            </fieldset>
+        </form>
+
+    </section>
+
+    <script src="./js/nuevo-cliente.js" type="module"></script>
+<hr>
+    
+</body>
+</html>
