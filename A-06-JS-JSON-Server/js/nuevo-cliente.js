@@ -1,19 +1,21 @@
-import { postCliente } from "./api";
-import { validar } from "./funciones";
+import { postCliente } from "./api.js";
+import { validar } from "./funciones.js";
 
 (function() {
     
     const formulario = document.querySelector('#formulario')
     
-    formulario.addEventListener('submit', async (e) => {
-        e.preventDefault()
+    formulario.addEventListener('submit', addCliente)
+
+    async function addCliente(cliente) {
+        cliente.preventDefault()
         const cli = crearCliente()
         if( !validar(cli)){
             alert('Todos los campos son Obligatorios')
             return;
         }
         await postCliente(cli);
-    })
+    }
 
     const crearCliente = () => {
         const apellido = document.querySelector('#idApellido')

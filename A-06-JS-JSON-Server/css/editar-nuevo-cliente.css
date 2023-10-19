@@ -1,1 +1,41 @@
 @import url(./style.css);
+
+
+
+/**----------------EDITAR CLIENTE---------------------**/
+
+.containerEditClient{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    margin-top: 2rem;
+}
+fieldset{
+    width: 50%;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 20px;
+    padding: 3rem;
+}
+legend{
+    width: 40%;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding: 0.5rem;
+    border-radius: 15%;
+}
+
+.campo{
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.inputs input{
+    background-color: azure;
+    font-size: 2rem;
+}
